@@ -12,7 +12,9 @@
 
 机器学习的目的就是寻找一个**Function**：下面是寻找一个**F**的步骤：
 
-1. **with Unknown Parameters** $Model:y=b+wx_1$ 参数说明 $x_1:feature,w:weight,b:bias$
+1. **with Unknown Parameters** $Model:y=b+wx_1$ 
+   
+   参数说明 $x_1:feature,w:weight,b:bias$
    
 2. **Define Loss from Training Data**
 
@@ -24,21 +26,21 @@
    
    **Loss的类别**：
    
-   $e=|y-\hat{y}|\;\;\;L\;is\;mean\;absolute\;error(MAE)$
+   $e=|y-\hat{y}|$ L is mean absolute error(MAE)
    
-   $e=(y-\hat{y})^2\;\;\;L\;is\;mean\;square\;error(MSE)$
+   $e=(y-\hat{y})^2$ L is mean square error(MSE)
    
-   $If\;y\;and\;\hat{y}\;are\;both\;probability\;distributions\;\rightarrow Cross-entropy(交叉熵损失)$
+   If $y$ and $\hat{y}$ are both probability distributions -> Cross-entropy(交叉熵损失)
    
 3. **Optimization**
 
-   **Gradient Descent**:(梯度下降) $w^{*},b^{*}=arg\;\underset{w,b}\min L$
+   **Gradient Descent**:(梯度下降)  $w^{*},b^{*}=arg\underset{w,b}\min L$
 
    - (Randomly)Pick an initial value $w^0,b^0$
    
-   - Compute $\frac{\partial L}{\partial w}|_w=w^0,\frac{\partial L}{\partial b}|_b=b^0$ , 决定$w$更新的快慢由学习率决定：
+   - Compute $\frac{\partial L}{\partial w}|_w=w^0,\frac{\partial L}{\partial b}|_b=b^0$ , 决定 $w$ 更新的快慢由学习率决定：
    
-     $\eta\frac{\partial L}{\partial w}|_w=w^0\;\eta:learning\;rate(hyper\;parameters)$ 
+     $\eta\frac{\partial L}{\partial w}|_w=w^0$ $\eta:learning\;rate(hyper\;parameters)$ 
    
      $w^1\leftarrow w^0-\eta\frac{\partial L}{\partial w}|_w=w^0$
    
