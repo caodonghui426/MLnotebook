@@ -23,11 +23,12 @@
    $Loss: L=\frac{1}{N}\sum_n{e_n}$ ,损失函数是计算 $y$ 与 $\hat{y}(label)$ 之间的距离
    
    **Loss的类别**：
-   $$
-   e=|y-\hat{y}|\;\;\;L\;is\;mean\;absolute\;error(MAE)\\
-   e=(y-\hat{y})^2\;\;\;L\;is\;mean\;square\;error(MSE)\\
-   If\;y\;and\;\hat{y}\;are\;both\;probability\;distributions\;\rightarrow Cross-entropy(交叉熵损失)
-   $$
+   
+   $e=|y-\hat{y}|\;\;\;L\;is\;mean\;absolute\;error(MAE)$
+   
+   $e=(y-\hat{y})^2\;\;\;L\;is\;mean\;square\;error(MSE)$
+   
+   $If\;y\;and\;\hat{y}\;are\;both\;probability\;distributions\;\rightarrow Cross-entropy(交叉熵损失)$
    
 3. **Optimization**
 
@@ -35,7 +36,7 @@
 
    - (Randomly)Pick an initial value $w^0,b^0$
    
-   - Compute $\frac{\partial L}{\partial w}|_w=w^0,\frac{\partial L}{\partial b}|_b=b^0$, 决定$w$更新的快慢由学习率决定：
+   - Compute $\frac{\partial L}{\partial w}|_w=w^0,\frac{\partial L}{\partial b}|_b=b^0$ , 决定$w$更新的快慢由学习率决定：
    
      $\eta\frac{\partial L}{\partial w}|_w=w^0\;\eta:learning\;rate(hyper\;parameters)$ 
    
@@ -57,7 +58,7 @@
 
 1. **Training & Testing Neural Networks** -in Pytorch **Step 1**
 
-![image-20221009202318843](img\image-20221009202318843.png) 
+![image-20221009202318843](img/image-20221009202318843.png) 
 
 2. **Dataset & Dataloader**
 
@@ -87,17 +88,17 @@
            return len(self.data)
    ```
 
-   ![image-20221009212011534](img\image-20221009212011534.png)
+   ![image-20221009212011534](img/image-20221009212011534.png)
 
 3. **Tensors**
 
    `Tensors - Shape of Tensors`
 
-   ![image-20221009212612632](img\image-20221009212612632.png)
+   ![image-20221009212612632](img/image-20221009212612632.png)
 
    `Tensors - Create Tensors`
 
-   ![image-20221009212725911](img\image-20221009212725911.png)
+   ![image-20221009212725911](img/image-20221009212725911.png)
 
    `Tensors - Common Operations`
 
@@ -173,7 +174,7 @@
 
 4. **Training & Testing Neural Networks** -in Pytorch **Step 2**
 
-   ![image-20221010105549800](img\image-20221010105549800.png)
+   ![image-20221010105549800](img/image-20221010105549800.png)
 
    `torch.nn - Network Layers`
 
@@ -197,11 +198,11 @@
 
    - Sigmoid Activation:`nn.Sigmoid()`
 
-     ![image-20221010142033135](img\image-20221010142033135.png)
+     ![image-20221010142033135](img/image-20221010142033135.png)
 
    - ReLU Activation:`nn.ReLU()`
 
-     ![image-20221010142107624](img\image-20221010142107624.png)
+     ![image-20221010142107624](img/image-20221010142107624.png)
 
    `torch.nn - Build your own neural network`
 
@@ -238,7 +239,7 @@
 
 5. **Training & Testing Neural Networks** -in Pytorch **Step 3**
 
-   ![image-20221010150412817](img\image-20221010150412817.png)
+   ![image-20221010150412817](img/image-20221010150412817.png)
 
    `torch.nn - Loss Function`
 
@@ -250,7 +251,7 @@
 
    > Gradient-based **optimization algorithms**(优化算法，最佳演算法) that adjust network parameters to reduce error.
 
-   ![image-20221010151748756](img\image-20221010151748756.png)
+   ![image-20221010151748756](img/image-20221010151748756.png)
 
    **E.g.** Stochastic Gradient Descent(SGD)(随机梯度下降)
 
@@ -264,7 +265,7 @@
 
 7. **Training & Testing Neural Networks** -in Pytorch **Step 5**
 
-   ![image-20221010154542993](img\image-20221010154542993.png)
+   ![image-20221010154542993](img/image-20221010154542993.png)
 
    **`Neural Network Training Setup`**
 
@@ -333,15 +334,15 @@
 
 ### 1.General Guide
 
-![image-20221012143005168](img\image-20221012143005168.png)
+![image-20221012143005168](img/image-20221012143005168.png)
 
 ### 2.`model bias`->loss on training data go large
 
-![image-20221012143323243](img\image-20221012143323243.png)
+![image-20221012143323243](img/image-20221012143323243.png)
 
 ### 3.`Optimization`->loss on training data go large
 
-![image-20221012143647342](img\image-20221012143647342.png)
+![image-20221012143647342](img/image-20221012143647342.png)
 
 > Model Bias v.s. Optimization Issue
 >
@@ -353,7 +354,7 @@
 >
 > - Solution: More powerful optimization technology(Adam). 
 >
->   ![image-20221012143952217](img\image-20221012143952217.png)
+>   ![image-20221012143952217](img/image-20221012143952217.png)
 
 ### 4.`Overfitting`->Training data:small, Testing data:large
 
@@ -367,17 +368,17 @@
 
 `Bias-Complexity Trade-off`
 
-![image-20221012152220862](img\image-20221012152220862.png)
+![image-20221012152220862](img/image-20221012152220862.png)
 
-![image-20221012153527800](img\image-20221012153527800.png)
+![image-20221012153527800](img/image-20221012153527800.png)
 
 > **Cross Validation(交叉验证)**
 >
-> ![image-20221012155211823](img\image-20221012155211823.png)
+> ![image-20221012155211823](img/image-20221012155211823.png)
 >
 > **N-fold Cross Validation**
 >
-> ![image-20221012155455901](img\image-20221012155455901.png)
+> ![image-20221012155455901](img/image-20221012155455901.png)
 
 ## 5.Optimization Fails because
 
